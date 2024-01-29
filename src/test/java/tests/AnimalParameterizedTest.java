@@ -27,7 +27,7 @@ public class AnimalParameterizedTest {
     }
 
     @Test
-    public void getFoodForAnimalKindTest() throws Exception {
+    public void checkFoodForAnimalKindTest() throws Exception {
         Animal animal = new Animal();
         Assert.assertEquals(food, animal.getFood(animalKind));
     }

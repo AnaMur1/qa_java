@@ -11,17 +11,17 @@ import java.util.Arrays;
 public class CatTests {
 
     @Test
-    public void testCat(){
+    public void checkCatSound(){
         Feline feline = Mockito.mock(Feline.class);
         Cat cat = new Cat(feline);
         Assert.assertEquals("Мяу", cat.getSound());
     }
 
     @Test
-    public void testCat2() throws Exception {
+    public void checkCatFood() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
-        Mockito.when(feline.eatMeat()).thenReturn(Arrays.asList("раз", "два"));
+        Mockito.when(feline.eatMeat()).thenReturn(Arrays.asList("Животные", "Птицы", "Рыба"));
         Cat cat = new Cat(feline);
-        Assert.assertEquals(Arrays.asList("раз", "два"), cat.getFood());
+        Assert.assertEquals(Arrays.asList("Животные", "Птицы", "Рыба"), cat.getFood());
     }
 }

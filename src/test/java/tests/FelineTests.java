@@ -12,31 +12,31 @@ public class FelineTests {
     private final int NOT_DEFAULT_AMOUNT_OF_KITTENS =2;
 
     @Test
-    public void felineTest1(){
+    public void checkFelineKittensDefaultValue(){
         Feline feline = new Feline();
         Assert.assertEquals(DEFAULT_AMOUNT_OF_KITTENS, feline.getKittens());
     }
 
     @Test
-    public void felineTest2(){
+    public void checkFelineKittensNonDefaultValue(){
         Feline feline = new Feline();
         Assert.assertEquals(NOT_DEFAULT_AMOUNT_OF_KITTENS, feline.getKittens(NOT_DEFAULT_AMOUNT_OF_KITTENS));
     }
 
     @Test
-    public void felineTest3(){
+    public void checkFelineFamily(){
         Feline feline = new Feline();
         Assert.assertEquals("Кошачьи", feline.getFamily());
     }
 
     @Test
-    public void felineTest4() throws Exception {
+    public void checkFelineFoodMeatVariant() throws Exception {
         Feline feline = new Feline();
         Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), feline.eatMeat());
     }
 
     @Test
-    public void felineTest5() throws Exception {
+    public void checkFelineFoodVeganVariant() throws Exception {
         Feline feline = new Feline();
         Assert.assertEquals(List.of("Трава", "Различные растения"), feline.getFood("Травоядное"));
     }

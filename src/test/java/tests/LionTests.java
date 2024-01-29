@@ -13,7 +13,7 @@ public class LionTests {
     private final int DEFAULT_AMOUNT_OF_KITTENS =1;
 
     @Test
-    public void lionTest1() throws Exception {
+    public void checkLionFood() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
         Mockito.when(feline.getFood("Хищник")).thenReturn(Arrays.asList("Животные", "Птицы", "Рыба"));
         Lion lion = new Lion("Самец", feline);
@@ -21,21 +21,21 @@ public class LionTests {
     }
 
     @Test
-    public void lionTest2() throws Exception {
+    public void checkLionMane() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
         Lion lion = new Lion("Самец", feline);
         Assert.assertTrue(lion.doesHaveMane());
     }
 
     @Test
-    public void lionTest3() throws Exception {
+    public void checkLionWithoutMane() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
         Lion lion = new Lion("Самка", feline);
         Assert.assertFalse(lion.doesHaveMane());
     }
 
     @Test
-    public void lionTest5() throws Exception {
+    public void checkLionKittens() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
         Mockito.when(feline.getKittens()).thenReturn(DEFAULT_AMOUNT_OF_KITTENS);
         Lion lion = new Lion("Самец", feline);
