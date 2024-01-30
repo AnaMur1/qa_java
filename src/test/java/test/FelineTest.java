@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import com.example.Feline;
 import org.junit.Assert;
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class FelineTests {
+public class FelineTest {
 
     private final int DEFAULT_AMOUNT_OF_KITTENS =1;
     private final int NOT_DEFAULT_AMOUNT_OF_KITTENS =2;

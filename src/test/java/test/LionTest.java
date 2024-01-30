@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 
 import java.util.Arrays;
 
-public class LionTests {
+public class LionTest {
 
     private final int DEFAULT_AMOUNT_OF_KITTENS =1;
 

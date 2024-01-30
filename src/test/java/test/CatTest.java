@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import com.example.Cat;
 import com.example.Feline;
@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 
 import java.util.Arrays;
 
-public class CatTests {
+public class CatTest {
 
     @Test
     public void checkCatSound(){
