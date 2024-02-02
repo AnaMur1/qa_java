@@ -5,9 +5,6 @@ import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;  // Добавлен этот импорт
-
 
 import java.util.Arrays;
 
@@ -30,6 +27,12 @@ public class LionTest {
         Assert.assertTrue(lion.doesHaveMane());
     }
 
+    @Test(expected = Exception.class)
+    public void checkLionManeUnIdentifiedGender() throws Exception {
+        Feline feline = Mockito.mock(Feline.class);
+        Lion lion = new Lion("Самурай", feline);
+    }
+
     @Test
     public void checkLionWithoutMane() throws Exception {
         Feline feline = Mockito.mock(Feline.class);
@@ -43,19 +46,5 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(DEFAULT_AMOUNT_OF_KITTENS);
         Lion lion = new Lion("Самец", feline);
         Assert.assertEquals(DEFAULT_AMOUNT_OF_KITTENS, lion.getKittens());
-    }
-
-    @Test
-    public void checkLionValidSexMale() throws Exception {
-        Feline feline = Mockito.mock(Feline.class);
-        Lion lion = new Lion("Самец", feline);
-        assertTrue(lion.doesHaveMane());
-    }
-
-    @Test
-    public void checkLionValidSexFemale() throws Exception {
-        Feline feline = Mockito.mock(Feline.class);
-        Lion lion = new Lion("Самка", feline);
-        assertFalse(lion.doesHaveMane());
     }
 }
